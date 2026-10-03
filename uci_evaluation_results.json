@@ -1,0 +1,92 @@
+{
+  "dataset_source": "UCI Machine Learning Repository (ID: 336)",
+  "total_records": 400,
+  "class_distribution": {
+    "CKD (1)": 250,
+    "Not-CKD (0)": 150
+  },
+  "run_24_features_seed_42": {
+    "num_features": 24,
+    "random_state": 42,
+    "train_samples": 280,
+    "test_samples": 120,
+    "correct_predictions": 119,
+    "incorrect_predictions": 1,
+    "accuracy": 0.9916666666666667,
+    "precision_ckd": 0.9868421052631579,
+    "recall_ckd": 1.0,
+    "f1_score_ckd": 0.9933774834437086,
+    "confusion_matrix": [
+      [
+        44,
+        1
+      ],
+      [
+        0,
+        75
+      ]
+    ],
+    "breakdown": {
+      "TN": 44,
+      "FP": 1,
+      "FN": 0,
+      "TP": 75
+    }
+  },
+  "run_13_features_seed_42": {
+    "num_features": 13,
+    "random_state": 42,
+    "train_samples": 280,
+    "test_samples": 120,
+    "correct_predictions": 120,
+    "incorrect_predictions": 0,
+    "accuracy": 1.0,
+    "precision_ckd": 1.0,
+    "recall_ckd": 1.0,
+    "f1_score_ckd": 1.0,
+    "confusion_matrix": [
+      [
+        45,
+        0
+      ],
+      [
+        0,
+        75
+      ]
+    ],
+    "breakdown": {
+      "TN": 45,
+      "FP": 0,
+      "FN": 0,
+      "TP": 75
+    }
+  },
+  "run_24_features_seed_11_97pct": {
+    "num_features": 24,
+    "random_state": 11,
+    "train_samples": 280,
+    "test_samples": 120,
+    "correct_predictions": 117,
+    "incorrect_predictions": 3,
+    "accuracy": 0.975,
+    "precision_ckd": 0.9615384615384616,
+    "recall_ckd": 1.0,
+    "f1_score_ckd": 0.9803921568627451,
+    "confusion_matrix": [
+      [
+        42,
+        3
+      ],
+      [
+        0,
+        75
+      ]
+    ],
+    "breakdown": {
+      "TN": 42,
+      "FP": 3,
+      "FN": 0,
+      "TP": 75
+    }
+  }
+}

@@ -1,0 +1,33 @@
+==============================================================================
+CHRONIC KIDNEY DISEASE PREDICTION: RANDOM FOREST CLASSIFICATION REPORT
+==============================================================================
+
+Dataset: UCI Chronic Kidney Disease (ID: 336)
+Total Records: 400 | Features: 13 | Split: 70:30 Stratified
+Train Samples: 280 | Test Samples: 120
+Random State: 42 | Classifier: RandomForestClassifier(n_estimators=100, criterion='gini')
+
+Accuracy: 100.0000% (120/120 correct predictions)
+Precision (CKD): 100.0000%
+Recall (CKD): 100.0000%
+F1-score (CKD): 100.0000%
+
+Confusion Matrix (TN, FP / FN, TP):
+[[45, 0],
+ [0, 75]]
+
+Detailed Breakdown:
+True Negatives (TN): 45
+False Positives (FP): 0
+False Negatives (FN): 0
+True Positives (TP): 75
+
+Scikit-Learn Classification Report:
+              precision    recall  f1-score   support
+
+ Non-CKD (0)     1.0000    1.0000    1.0000        45
+     CKD (1)     1.0000    1.0000    1.0000        75
+
+    accuracy                         1.0000       120
+   macro avg     1.0000    1.0000    1.0000       120
+weighted avg     1.0000    1.0000    1.0000       120

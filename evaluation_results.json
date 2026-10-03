@@ -1,0 +1,130 @@
+{
+  "total_records": 400,
+  "num_features": 13,
+  "feature_names": [
+    "Bp",
+    "Sg",
+    "Al",
+    "Su",
+    "Rbc",
+    "Bu",
+    "Sc",
+    "Sod",
+    "Pot",
+    "Hemo",
+    "Wbcc",
+    "Rbcc",
+    "Htn"
+  ],
+  "target_column": "Class",
+  "class_counts": {
+    "1": 200,
+    "0": 200
+  },
+  "model_parameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "class_weight": null,
+    "criterion": "gini",
+    "max_depth": null,
+    "max_features": "sqrt",
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 1,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 100,
+    "n_jobs": null,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "fresh_experiment_stratified": {
+    "split_ratio": "70:30",
+    "random_state": 42,
+    "stratified": true,
+    "train_samples": 280,
+    "test_samples": 120,
+    "correct_predictions": 59,
+    "incorrect_predictions": 61,
+    "accuracy": 0.49166666666666664,
+    "precision_class_1": 0.49122807017543857,
+    "recall_class_1": 0.4666666666666667,
+    "f1_score_class_1": 0.47863247863247865,
+    "macro_precision": 0.49164578111946533,
+    "macro_recall": 0.4916666666666667,
+    "macro_f1": 0.49134875964144253,
+    "weighted_precision": 0.4916457811194653,
+    "weighted_recall": 0.49166666666666664,
+    "weighted_f1": 0.4913487596414426,
+    "confusion_matrix": [
+      [
+        31,
+        29
+      ],
+      [
+        32,
+        28
+      ]
+    ],
+    "breakdown": {
+      "TN": 31,
+      "FP": 29,
+      "FN": 32,
+      "TP": 28
+    }
+  },
+  "fresh_experiment_unstratified": {
+    "split_ratio": "70:30",
+    "random_state": 42,
+    "stratified": false,
+    "train_samples": 280,
+    "test_samples": 120,
+    "correct_predictions": 51,
+    "incorrect_predictions": 69,
+    "accuracy": 0.425,
+    "precision_class_1": 0.47619047619047616,
+    "recall_class_1": 0.29850746268656714,
+    "f1_score_class_1": 0.3669724770642202,
+    "macro_precision": 0.4368131868131868,
+    "macro_recall": 0.4417065615319628,
+    "macro_f1": 0.4201274599061559,
+    "weighted_precision": 0.4414072039072039,
+    "weighted_recall": 0.425,
+    "weighted_f1": 0.4139260452412634,
+    "confusion_matrix": [
+      [
+        31,
+        22
+      ],
+      [
+        47,
+        20
+      ]
+    ],
+    "breakdown": {
+      "TN": 31,
+      "FP": 22,
+      "FN": 47,
+      "TP": 20
+    }
+  },
+  "pre_trained_rf_pkl_all_400": {
+    "total_samples_evaluated": 400,
+    "accuracy": 1.0,
+    "confusion_matrix": [
+      [
+        200,
+        0
+      ],
+      [
+        0,
+        200
+      ]
+    ],
+    "note": "Evaluated on the full 400 records. rf.pkl was fit on all 400 samples with no held-out test split, resulting in memorization/100% training accuracy."
+  }
+}

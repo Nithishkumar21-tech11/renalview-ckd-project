@@ -1,5 +1,7 @@
-streamlit
-pandas
-numpy
-scikit-learn
-joblib
+fastapi
+uvicorn[standard]
+python-multipart
+pandas==3.0.6
+scikit-learn==1.9.1
+joblib==1.6.0
+pypdf==6.19.0

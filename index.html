@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7fafc">
+  <title>RenalView | CKD Record Review</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-shell">
+    <a class="brand" href="#top"><span class="brand-mark"><span></span><span></span></span><span>renal<span class="brand-light">view</span></span></a>
+    <nav class="main-nav" id="main-nav"><a href="#how-it-works">How it works</a><a href="#record-review">Record review</a></nav>
+    <a class="nav-cta" href="#record-review">Review a record <span>↗</span></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main id="top">
+  <section class="hero section-shell">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> KIDNEY HEALTH RECORD REVIEW</div>
+      <h1>Clearer insights<br><em>from your records.</em></h1>
+      <p class="hero-lede">Upload a lab report, review the measurements, and see how the CKD model classifies the record.</p>
+      <div class="hero-actions"><a class="button button-primary" href="#record-review">Start a record review <span>↓</span></a><a class="text-link" href="#how-it-works">See how it works</a></div>
+      <div class="hero-note"><span class="note-icon">✓</span><span>Review every extracted value before generating a result.</span></div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="art-glow"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      <div class="kidney-card">
+        <div class="kidney-card-top"><span class="tiny-mark">RV</span><span class="live-dot"></span></div>
+        <div class="kidney-illustration">
+          <svg viewBox="0 0 260 220">
+            <defs><linearGradient id="kidneyA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#54c7b7"/><stop offset="1" stop-color="#1b837e"/></linearGradient><linearGradient id="kidneyB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b9e5da"/><stop offset="1" stop-color="#68b9aa"/></linearGradient></defs>
+            <path d="M92 29c-28-18-62 1-69 37-7 34 12 75 42 89 22 10 42-1 49-22 6-18-3-30-16-39-12-8-17-18-10-31 8-16 22-24 4-34Z" fill="url(#kidneyA)"/>
+            <path d="M168 29c28-18 62 1 69 37 7 34-12 75-42 89-22 10-42-1-49-22-6-18 3-30 16-39 12-8 17-18 10-31-8-16-22-24-4-34Z" fill="url(#kidneyB)"/>
+            <path d="M103 93c10 8 17 18 19 33l5 43c1 10-13 14-17 4l-9-25c-5-14-13-24-24-32M157 93c-10 8-17 18-19 33l-5 43c-1 10 13 14 17 4l9-25c5-14 13-24 24-32" fill="none" stroke="#e6faf4" stroke-width="8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="kidney-card-bottom"><div><strong>Record analysis</strong><small>13 measurements</small></div><span class="card-arrow">↗</span></div>
+      </div>
+      <div class="float-pill pill-top"><span class="pill-check">✓</span> Values reviewed</div><div class="float-pill pill-bottom"><span class="pulse-dot"></span> Report insights</div>
+      <div class="art-caption">A simpler view of the numbers<br><span>that matter in a record.</span></div>
+    </div>
+  </section>
+  <section class="trust-strip section-shell" id="how-it-works">
+    <div class="strip-item"><span class="strip-number">01</span><div><strong>Upload</strong><small>Add a text-based PDF report</small></div></div><div class="strip-line"></div>
+    <div class="strip-item"><span class="strip-number">02</span><div><strong>Review</strong><small>Check and correct extracted values</small></div></div><div class="strip-line"></div>
+    <div class="strip-item"><span class="strip-number">03</span><div><strong>View result</strong><small>See the model's classification</small></div></div>
+  </section>
+  <section class="workspace section-shell" id="record-review">
+    <div class="section-heading"><div><span class="section-kicker">RECORD WORKSPACE</span><h2>Start a new review</h2></div><p>Measurements suggested from the PDF remain editable. Confirm each value against the source report.</p></div>
+    <div class="workspace-grid">
+      <aside class="upload-card">
+        <div class="card-heading"><div><span class="section-kicker">STEP 1</span><h3>Upload a report</h3></div><span class="step-icon">01</span></div>
+        <p class="card-subtitle">Select a text-based PDF. Scanned documents are not supported yet.</p>
+        <label class="dropzone" id="dropzone" for="pdf-file">
+          <input id="pdf-file" type="file" accept="application/pdf,.pdf" hidden>
+          <span class="upload-icon"><svg viewBox="0 0 24 24"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M4 15.5v3A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5v-3"/></svg></span>
+          <strong>Drop your PDF here</strong><span class="drop-hint">or <u>browse files</u></span><span class="file-limit">PDF format · up to 12 MB</span>
+        </label>
+        <div class="selected-file" id="selected-file" hidden><span class="file-badge">PDF</span><span id="file-name"></span><button id="remove-file" type="button" aria-label="Remove selected PDF">×</button></div>
+        <button class="button button-secondary full-width" id="extract-button" type="button" disabled>Read PDF values <span>→</span></button>
+        <p class="status-message" id="upload-status" role="status" aria-live="polite"></p>
+        <div class="upload-footnote"><span class="lock-icon">⌑</span> Selected report values are used to fill the review form.</div>
+      </aside>
+      <section class="review-card">
+        <div class="card-heading"><div><span class="section-kicker">STEP 2</span><h3>Review measurements</h3></div><span class="step-icon">02</span></div>
+        <p class="card-subtitle">Check every suggested value and complete any missing fields.</p>
+        <form id="review-form" novalidate><div class="field-grid" id="field-grid"></div><div class="form-actions"><span class="form-hint" id="form-hint">All 13 fields are needed for this model.</span><button class="button button-primary" id="predict-button" type="submit">Generate result <span>→</span></button></div></form>
+        <div class="result-panel" id="result-panel" hidden aria-live="polite"><span class="result-icon" id="result-icon"></span><div><span class="section-kicker">MODEL CLASSIFICATION</span><h3 id="result-title"></h3><p id="result-copy"></p></div><button class="result-close" id="result-close" type="button" aria-label="Close result">×</button></div>
+      </section>
+    </div>
+  </section>
+  <section class="about-band"><div class="section-shell about-inner"><div><span class="section-kicker">HOW IT WORKS</span><h2>From report to review,<br><em>in three simple steps.</em></h2></div><div class="about-text"><p>The website reads selectable text from a PDF and looks for measurements that match the model's fields. You can edit every value before asking the model to classify the record.</p><a class="text-link" href="#record-review">Review a record ↑</a></div></div></section>
+</main>
+<footer class="site-footer"><div class="section-shell footer-inner"><a class="brand footer-brand" href="#top"><span class="brand-mark"><span></span><span></span></span><span>renal<span class="brand-light">view</span></span></a><span>CKD Record Review · Research project</span><a href="#top" class="back-top">Back to top ↑</a></div></footer>
+<script src="/assets/app.js" defer></script>
+</body>
+</html>
